@@ -25,7 +25,7 @@ const HomeScreen = () => {
       <View className='flex-row pb-3 items-center mx-4 space-x-2'>
         <Image
           source={{ uri: 'https://links.papareact.com/wru' }}
-          className='h-11 w-11 bg-gray-300 rounded-full'
+          className='h-10 w-10 bg-gray-300 rounded-full'
         />
 
         <View className='flex-1'>
