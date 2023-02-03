@@ -1,27 +1,26 @@
-import { Text, ScrollView, Platform } from 'react-native';
+import { ScrollView } from 'react-native';
 import React from 'react';
-import CatergoryCard from './CatergoryCard';
+import CategoryCard from './CategoryCard';
 
 const Categories = () => {
   return (
     <ScrollView
       horizontal
-      bounces={false}
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={{
-        backgroundColor: 'red',
-        paddingHorizontal: 15,
-        paddingTop: 10,
+        marginVertical: 15,
+        paddingLeft: 16,
+        paddingRight: 8,
       }}
     >
       {/* Category Card */}
 
-      <CatergoryCard />
-      <CatergoryCard />
-      <CatergoryCard />
-      <CatergoryCard />
-      <CatergoryCard />
-      <CatergoryCard />
+      <CategoryCard />
+      <CategoryCard />
+      <CategoryCard />
+      <CategoryCard />
+      <CategoryCard />
+      <CategoryCard />
     </ScrollView>
   );
 };

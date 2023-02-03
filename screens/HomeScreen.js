@@ -9,6 +9,8 @@ import {
   UserIcon,
 } from 'react-native-heroicons/outline';
 import Categories from '../components/Categories';
+import PreviousRestaurants from '../components/PreviousRestaurants';
+
 const HomeScreen = () => {
   const navigation = useNavigation();
   useLayoutEffect(() => {
@@ -20,7 +22,7 @@ const HomeScreen = () => {
   console.log('HomeScreen was executed');
 
   return (
-    <SafeAreaView edges={['top', 'left', 'right']} className='bg-white pt-2'>
+    <SafeAreaView edges={['top', 'left', 'right']} className='bg-white pt-4'>
       {/* Header */}
       <View className='flex-row pb-3 items-center mx-4 space-x-2'>
         <Image
@@ -30,7 +32,7 @@ const HomeScreen = () => {
 
         <View className='flex-1'>
           <Text className='text-gray-400 font-bold text-xs'>Deliver Now!</Text>
-          <View className='flex-row items-center justify-start'>
+          <View className='flex-row items-center'>
             <Text className='text-xl font-bold'>Current Location</Text>
             <View className='pt-1 '>
               <ChevronDownIcon color='#00CCBB' size={20} />
@@ -42,8 +44,8 @@ const HomeScreen = () => {
 
       {/* Search Bar */}
       <View className='flex-row pb-3 items-center mx-4 space-x-2'>
-        <View className='bg-gray-200 flex-row p-2 flex-1 rounded-md space-x-2 items-center'>
-          <MagnifyingGlassIcon color={'#333'} size={20} />
+        <View className='bg-gray-100 flex-row flex-1 rounded-md space-x-2 items-center p-2'>
+          <MagnifyingGlassIcon color={'#999'} size={26} />
           <TextInput
             className='flex-1'
             keyboardType='default'
@@ -55,9 +57,16 @@ const HomeScreen = () => {
       </View>
 
       {/* Body  */}
-      <ScrollView className='bg-gray-100'>
+      <ScrollView
+        className='bg-gray-100'
+        contentContainerStyle={{ paddingBottom: 1000 }}
+      >
         <View>
           <Categories />
+        </View>
+
+        <View>
+          <PreviousRestaurants />
         </View>
       </ScrollView>
     </SafeAreaView>
